@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
+  can_msgs
 )
 
 add_message_files(
@@ -31,12 +32,21 @@ generate_messages(
 )
 
 catkin_package(
-  CATKIN_DEPENDS message_runtime std_msgs roscpp rospy
+  CATKIN_DEPENDS message_runtime std_msgs roscpp rospy can_msgs
 )
 
 include_directories(
+  include
   ${catkin_INCLUDE_DIRS}
 )
+
+add_executable(control_node src/control_node.cpp)
+
+add_dependencies(control_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(control_node
+  ${catkin_LIBRARIES}
+)
+
 
 
 
