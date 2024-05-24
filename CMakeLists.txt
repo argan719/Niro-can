@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 add_message_files(
    FILES
+   CONTROL_MSG.msg
    CONTROL_MSG_1.msg
    CONTROL_MSG_2.msg
    FB_EAIT_EPS.msg
@@ -24,11 +25,13 @@ add_message_files(
    FB_EAIT_IMU.msg
    FB_EAIT_SCC.msg
    FB_EAIT_SPD.msg
+   FEEDBACK.msg
 )
 
 generate_messages(
   DEPENDENCIES
   std_msgs
+  can_msgs
 )
 
 catkin_package(

@@ -3,5 +3,5 @@ bool EPS_En
 bool SCC_En
 bool AEB_Act
 uint8 EPS_Interval 
-float32 AEB_decel_value
+uint8 AEB_decel_value
 uint8 Alive_count

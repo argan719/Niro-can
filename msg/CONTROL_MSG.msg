@@ -1,0 +1,9 @@
+uint8 EPS_en  
+uint8 ControlSW
+uint8 EPS_Interval  
+uint8 SCC_En    
+uint8 AEB_Act
+uint8 AEB_decel_value
+uint8 Alive_count
+float32 SCC_value
+float32 EPS_value
