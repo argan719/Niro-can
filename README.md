@@ -5,3 +5,4 @@
 
 joystick으로 차량 제어 
 ![GIFMaker_me (2)](https://github.com/argan719/Niro-can/assets/64789601/5b4edd95-962a-4225-b485-630cb5220f70)
+![GIFMaker_me (2)](https://github.com/argan719/Niro-can/assets/64789601/4de52dea-71e0-4087-83af-dbbe70612fb5)
