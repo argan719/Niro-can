@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/devel
+
+Name: joystick
+Description: Description of joystick
+Version: 0.0.1
+Cflags: -I/home/ubuntu/catkin_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs message_runtime

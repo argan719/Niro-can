@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/devel
+
+Name: canopen_chain_node
+Description: Description of canopen_chain_node
+Version: 0.8.5
+Cflags: -I/home/ubuntu/catkin_ws/devel/include -I/home/ubuntu/catkin_ws/src/ros_canopen/canopen_chain_node/include -I/usr/include
+Libs: -L${prefix}/lib -lcanopen_ros_chain /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+Requires: canopen_master diagnostic_updater message_runtime pluginlib rosconsole_bridge roscpp socketcan_interface std_srvs

@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/devel
+
+Name: canopen_motor_node
+Description: Description of canopen_motor_node
+Version: 0.8.5
+Cflags: -I/home/ubuntu/catkin_ws/src/ros_canopen/canopen_motor_node/include -I/usr/include
+Libs: -L${prefix}/lib -lcanopen_motor /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0 /usr/lib/x86_64-linux-gnu/libmuparser.so
+Requires: canopen_402 canopen_chain_node canopen_master controller_manager hardware_interface joint_limits_interface roscpp urdf

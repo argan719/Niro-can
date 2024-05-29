@@ -1,0 +1,2 @@
+can_package:joystick:ros_canopen/can_msgs:ros_canopen/canopen_402:ros_canopen/canopen_chain_node:ros_canopen/canopen_master:ros_canopen/canopen_motor_node:ros_canopen/ros_canopen:ros_canopen/socketcan_bridge:ros_canopen/socketcan_interface
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/catkin_ws/install -G Unix Makefiles

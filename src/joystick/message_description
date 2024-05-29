@@ -1,0 +1,10 @@
+uint8 EPS_en  -> boolean ()
+uint8 ControlSW  -> boolean
+uint8 EPS_Interval  -> hard coding
+uint8 SCC_En
+uint8 AEB_Act
+uint8 AEB_decel_value  -> 0
+uint8 Alive_count -> 0
+float32 SCC_value -> 
+float32 EPS_value -> left x
+
