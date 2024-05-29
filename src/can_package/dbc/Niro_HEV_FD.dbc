@@ -1,0 +1,110 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Accel_override_Switch : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 342 CONTROL_MSG_1: 8 Vector__XXX
+ SG_ ControlSW : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EPS_En : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SCC_En : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AEB_Act : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EPS_Interval : 8|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ AEB_decel_value : 24|8@1+ (0.01,0) [0|1] "G" Vector__XXX
+ SG_ Alive_count : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 343 CONTROL_MSG_2: 8 Vector__XXX
+ SG_ EPS_command : 0|16@1- (0.1,0) [-540|540] "deg" Vector__XXX
+ SG_ SCC_command : 24|16@1+ (0.01,-10.23) [-3|2] "m/s^2" Vector__XXX
+
+BO_ 1809 FB_EAIT_SCC: 8 Vector__XXX
+ SG_ ACC_control_state : 0|4@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ EPS_En_FB : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Override_ACC_state : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Override_BRK_state : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Vehicle_speed : 8|8@1+ (1,0) [0|255] "kph" Vector__XXX
+ SG_ AEB_state : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Long_Accel : 16|16@1+ (0.000127465,-4.17677312) [-4.17677312|4.176645655] "m/2^2" Vector__XXX
+ SG_ Gear_Disp : 32|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1808 FB_EAIT_EPS: 8 Vector__XXX
+ SG_ EPS_En_FB : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Override_state : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EPS_control_state : 0|4@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ Steering_angle : 8|16@1- (0.1,0) [-540|540] "deg" Vector__XXX
+ SG_ Control_SW_FB : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Str_Tq_1 : 24|13@1+ (0.01,-20.48) [-20.48|61.43] "-" Vector__XXX
+ SG_ Str_Tq_2 : 40|12@1+ (0.1,-204.8) [-204.8|204.7] "-" Vector__XXX
+ SG_ FB_alive_count : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1810 FB_EAIT_SPD: 8 Vector__XXX
+ SG_ WHL_SPD_FL : 0|14@1+ (0.03125,0) [0|511.96875] "" Vector__XXX
+ SG_ WHL_SPD_FR : 16|14@1+ (0.03125,0) [0|511.96875] "" Vector__XXX
+ SG_ WHL_SPD_RL : 32|14@1+ (0.03125,0) [0|511.96875] "" Vector__XXX
+ SG_ WHL_SPD_RR : 48|14@1+ (0.03125,0) [0|511.96875] "" Vector__XXX
+
+BO_ 1811 FB_EAIT_IMU: 8 Vector__XXX
+ SG_ Lat_Accel : 16|16@1+ (0.000127564,-4.17677312) [-4.17677312|4.18313362] "m/s^2" Vector__XXX
+ SG_ Yaw_Rate : 32|16@1+ (0.005,-163.84) [-163.84|163.835] "deg/s" Vector__XXX
+ SG_ Long_Accel : 0|16@1+ (0.001249157,-40.9323) [-40.9323|4.176645655] "m/s^2" Vector__XXX
+
+BO_ 1812 FB_EAIT_ETC: 8 Vector__XXX
+ SG_ acc_pedal_percent : 0|16@1+ (1,0) [0|2000] "%" Vector__XXX
+ SG_ brk_pedal_percent : 16|16@1+ (1,0) [0|2000] "%" Vector__XXX
+ SG_ turn_sig : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LCS_button_sig : 47|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Limit_sig : 45|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Cruise_buttons_sig : 40|4@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ SG_ 1808 EPS_En_FB "command feedback 0x156";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN";
+VAL_ 342 ControlSW 0 "Disable" 1 "Enable" ;
+VAL_ 342 EPS_En 0 "Disable" 1 "Enable" ;
+VAL_ 342 SCC_En 0 "Disable" 1 "Enable" ;
+VAL_ 342 AEB_Act 0 "Deactivate" 1 "Activate" ;
+VAL_ 1809 ACC_control_state 0 "AUTO_NONE" 1 "AUTO_RDY" 2 "AUTO_ALL_ON" 3 "AUTO_SCC_ON" 4 "AUTO_EPS_ON" 5 "AUTO_CANCEL" 6 "ESTOP" 7 "CANCEL_ACC" 8 "CANCEL_BRK" 9 "CANCEL_EPS" 10 "AUTO_ERR" ;
+VAL_ 1809 AEB_state 0 "Deactivate" 1 "Activate" ;
+VAL_ 1809 Gear_Disp 0 "P" 7 "R" 6 "N" 5 "D" ;
+VAL_ 1808 EPS_control_state 0 "AUTO_NONE" 1 "AUTO_RDY" 2 "AUTO_ALL_ON" 3 "AUTO_SCC_ON" 4 "AUTO_EPS_ON" 5 "AUTO_CANCEL" 6 "ESTOP" 7 "CANCEL_ACC" 8 "CANCEL_BRK" 9 "CANCEL_EPS" 10 "AUTO_ERR" ;
+VAL_ 1812 turn_sig 1 "left_turn" 4 "right_turn" 5 "hazard" ;
+VAL_ 1812 Cruise_buttons_sig 1 "UP" 2 "DOWN" 3 "Gap_Select" 4 "Click" 8 "Mode" ;
+

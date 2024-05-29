@@ -1,0 +1,20 @@
+<launch>
+    <!-- socketcan_bridge 노드 실행 -->
+    <node name="topic_to_socketcan_node" pkg="socketcan_bridge" type="topic_to_socketcan_node" output="screen">
+        <param name="can_device" value="can1" />
+    </node>
+
+    <node name="socketcan_to_topic_node" pkg="socketcan_bridge" type="socketcan_to_topic_node" output="screen">
+        <param name="can_device" value="can1" />
+    </node>
+
+    <!-- control_node 실행 -->
+    <node name="control_node" pkg="can_package" type="control_node" output="screen" />
+
+    <!-- joystick 패키지의 xbox_controller 노드 실행 -->
+    <node name="xbox_controller" pkg="joystick" type="xbox_controller" output="screen" />
+
+    <!-- joystick 패키지의 xbox_listener 노드 실행 -->
+    <node name="xbox_listener" pkg="joystick" type="xbox_listener" output="screen" />
+</launch>
+
