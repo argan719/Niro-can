@@ -10,4 +10,11 @@
 
     <!-- control_node 실행 -->
     <node name="control_node" pkg="can_package" type="control_node" output="screen" />
+
+    <!-- joystick 패키지의 xbox_controller 노드 실행 -->
+    <node name="xbox_controller" pkg="joystick" type="xbox_controller" output="screen" />
+
+    <!-- joystick 패키지의 xbox_listener 노드 실행 -->
+    <node name="xbox_listener" pkg="joystick" type="xbox_listener" output="screen" />
 </launch>
+
